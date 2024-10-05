@@ -1,0 +1,18 @@
+{
+    "name": "grouptp/devforum",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Faouz995",
+            "email": "faouz995@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\" : "src/"
+        }
+    },
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
+}
