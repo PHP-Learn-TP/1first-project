@@ -24,8 +24,8 @@ function sendConfirmationMail(User $user, int $code): bool
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'faouzanekouko@gmail.com';
-        $mail->Password   = 'uwnz yhqf bmqb ftqz';
+        $mail->Username   = 'tonemail@gmail.com';
+        $mail->Password   = 'Il faut un apppassword';
         $mail->Port       = 587;
 
         //Destinataires configuration
