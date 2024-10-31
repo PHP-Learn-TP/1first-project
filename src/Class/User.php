@@ -8,33 +8,52 @@ namespace App\Class;
 /**
  * Represente un utilisateur ou un developeurs
  */
-class User {
+class User
+{
 
+    private $id ;
     //Les   Renseignement de l'utilisateurs , je vais metttre des valeurs par default pour un text
-    private $firstName = 'John' ;
-    private $lastName = 'Doe' ;
-    private $email = 'john.doe@gmail.com' ;
+    private $firstname ;
+    private $lastname ;
+    private $email ;
 
-    //La liste des language cible de l'utilisateur dans un array []
-    private $language = ['PHP', 'Javascript', 'Python'] ;
-
+    private $password ;
 
 
+    //Verifie si l'utilisateur est verifier
+    private $confirmed ;
 
-    /**
-     * Elle retourne les information de l'utilisateur
-     * @return array
-     */
-    public function getUserInformation() : array {
-        
-        return [
-            'firstName' => $this->firstName,
-            'lastName' => $this->lastName,
-            'email' => $this->email,
-            'language' => $this->language
-        ] ;
+    private $created_at ;
+
+    public function get_firstname(): string
+    {
+        return $this->firstname;
     }
-    
+
+    public function get_lastname(): string
+    {
+        return $this->lastname;
+    }
+
+    public function get_email(): string
+    {
+        return $this->email;
+    }
+    // public function get_language(): array
+    // {
+    //     return isset($this->language) ? $this->language : [];
+    // }
+
+    public function get_password(): string
+    {
+        return $this->password;
+    }
+
+    public function is_confirmed() {
+        return $this->confirmed == 1 ? true : false;
+    }
+
+
     /* Quand a la question a savoir pouquoi preferer une fonction qui retourne des inforamation
         alors que nous pouvons tous simplement les declarer en public , la reponse est juste pour
         une meilleur securiter car l'erreur peu nous conduire a ecraser leurs valeurs alors 

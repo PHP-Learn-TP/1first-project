@@ -10,10 +10,8 @@
 <body style="text-align: center;">
     <!-- Etant donnees que ce contenue est coller dans le index.php , tout ce qui est declarer la est accessible ici , d'ou l'usage de $userInfo declarer dans la route home -->
     Hello <br>
-    je m'appelle <?= $userInfo['firstName'] ?> <?= $userInfo['lastName'] ?> <br>
-    Et voici mon email : <?= $userInfo['email'] ?> ans.
-
-
+    je m'appelle <?= $userInfo->get_firstname() ?> <?= $userInfo->get_lastname() ?> <br>
+    Et voici mon email : <?= $userInfo->get_email()?>
 </body>
 
 </html>
